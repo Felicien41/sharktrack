@@ -187,7 +187,7 @@ class Model():
 @app.route('/process', methods=['GET'])
 def process_videos():
     # Récupérer les paramètres depuis la requête GET
-    input_path = request.args.get('input', './input_videos')
+    input_path = request.args.get('path', './input_videos')
     stereo_prefix = request.args.get('stereo_prefix')
     limit = int(request.args.get('limit', 1000))
     imgsz = int(request.args.get('imgsz', 640))
